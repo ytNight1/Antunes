@@ -3,185 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antunes Motorsport</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Antunes Agenda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="time"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .agenda {
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body>  
+<body>
 
+<div class="container">
+    <h2>Antunes Agenda</h2>
 
-
-<div class="parallax"></div>
-
-
-<button id="backToTop">↑ Voltar ao Topo</button>
-
-
-<div id="popupBemVindo" class="popup">Bem-vindo ao nosso site!</div>
-
-
-<div id="horarioFuncionamento">Horário: Fechado</div>
-
-
-  <button id="toggleTheme">🌙 Mudar Tema</button>
-  <div id="progressBar"></div>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Antunes Motorsport</h1>
-                <img src="root/main/logo-removebg-preview.png" alt="Logo Antunes Motorsport">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#localizacao">Localização</a></li>
-        <li><a href="#faq" class="scroll-link">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-
-    </header>
-<input type="text" id="searchInput" placeholder="Buscar...">
-<div id="searchResults">
-    <p class="search-item">Serviço 1</p>
-    <p class="search-item">Serviço 2</p>
-    <p class="search-item">Projeto A</p>
-</div>
-
-    <main>
-        <section id="sobre">
-            <div class="container">
-                <h2>Sobre Nós</h2>
-                <p>A Antunes Motorsport é uma oficina mecânica especializada em serviços de alta performance e manutenção de veículos. Nossa equipe é composta por profissionais qualificados que estão prontos para atender todas as suas necessidades automotivas.</p>
-            </div>
-        </section>
-
-        <section id="servicos">
-            <div class="container">
-                <h2>Serviços</h2>
-                <div class="servico">
-                    <h3>Reparo de Motores</h3>
-                    <p>Diagnóstico e reparo de motores com tecnologia de ponta.</p>
-                </div>
-                <div class="servico">
-                    <h3>Suspensão e Alinhamento</h3>
-                    <p>Serviços de suspensão, alinhamento e balanceamento para garantir sua segurança.</p>
-                </div>
-                <div class="servico">
-                    <h3>Troca de Óleo</h3>
-                    <p>Troca de óleo e filtros para manter seu motor sempre em bom estado.</p>
-                </div>
-                <div class="servico">
-                    <h3>Preparação de Veículos</h3>
-                    <p>Preparação de veículos para competição com personalização completa.</p>
-                </div>
-            </div>
-        </section>
-        <section id="galeria">
-            <div class="container">
-                <h2>Galeria</h2>
-                <div id="carrosselGaleria img" class="carousel">
-    <img src="../img/imagem1.jpeg" alt="Imagem 1">
-    <img src="../img/imagem2.jpeg" alt="Imagem 2" style="display: none;">
-    <img src="../img/imagem3.jpeg" alt="Imagem 3" style="display: none;">
-</div>
-<button id="prev">Anterior</button>
-<button id="next">Próximo</button>
-
-                <div class="galeria-grid">
-                    <img src="../img/Messenger_creation_A6485D20-C612-40ED-94D0-72119D26822B.jpeg" alt="Carro 1">
-                    <img src="../img/Messenger_creation_266466DA-8D88-4590-94C7-B0DC506EC5A9.jpeg" alt="Carro 2">
-                    <img src="../img/Messenger_creation_205BAF09-B770-41FE-971B-53E62EE5224A.jpeg" alt="Carro 3">
-                    <img src="../img/Messenger_creation_A44D2F02-0E2E-4820-A7F4-31CFFB53A819.jpeg" alt="Carro 4">
-                </div>
-            </div>
-        </section>
-
-        <section id="contato">
-            <div class="container">
-                <h2>Contato</h2>
-                <form id="formContato">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-    <!-- Outros campos -->
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" maxlength="500"></textarea>
-    <small id="contadorMensagem">0/500 caracteres</small>
-    <button type="submit">Enviar</button>
-</form>
-
-            </div>
-        </section>
-
-
-
-<section id="faq">
-    <div class="container">
-        <h2>Perguntas Frequentes</h2>
-        <div class="faq-item">
-            <h3>Qual o horário de funcionamento?</h3>
-            <p>Estamos abertos de segunda a sexta, das 9h às 18h.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Fazem serviços em veículos de competição?</h3>
-            <p>Sim! Somos especializados na preparação de veículos para competições.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Qual a forma de pagamento?</h3>
-            <p>Aceitamos cartões de crédito, débito e pagamentos à vista.</p>
-        </div>
-    </div>
-    
-</section>
-
-<section id="newsletter">
-    <div class="container">
-        <h2>Inscreva-se na nossa Newsletter</h2>
-        <form id="formNewsletter">
-            <input type="email" id="emailNewsletter" name="email" placeholder="Digite seu e-mail" required>
-            <button type="submit">Inscrever-se</button>
-            <div id="feedbackNewsletter" style="display:none; color: #28a745; text-align: center; margin-top: 10px;"></div>
-
+    <div id="login">
+        <h3>Login</h3>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
         </form>
     </div>
-</section>
 
+    <div id="cadastro" style="margin-top: 30px;">
+        <h3>Cadastro</h3>
+        <form id="cadastroForm">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
 
-        <section id="localizacao">
-            <div class="container">
-                <h2>Localização</h2>
-                <p>Visite-nos em: Guarapuava PR, Bairro Dos Estados, Rua Brigadeiro Rocha 3111</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8407978722224!2d-51.46568698430714!3d-25.385919320359993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e7d1f81a3ab8d7%3A0x758f1bc9bb517672!2sRua%20Brigadeiro%20Rocha%203111%2C%20Guarapuava%20-%20PR%2C%2078510-530!5e0!3m2!1spt-BR!2sbr!4v1615561659497!5m2!1spt-BR!2sbr" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
-    </main>
+    <div class="agenda">
+        <h3>Agenda de Serviços Marcados</h3>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Hora</th>
+                    <th>Serviço</th>
+                    <th>Nome Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-11-10</td>
+                    <td>10:00</td>
+                    <td>Troca de Óleo</td>
+                    <td>João Silva</td>
+                </tr>
+                <tr>
+                    <td>2024-11-11</td>
+                    <td>14:00</td>
+                    <td>Alinhamento</td>
+                    <td>Maria Souza</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Antunes Motorsport. Todos os direitos reservados.
-            Whatsapp: (42) 9934-2200
-            Agende Sua Consulta Por Aqui!</p>
-        </div>
-    </footer>
+<script>
+    // Aqui você pode adicionar funcionalidades de JavaScript para manipulação do formulário e da agenda
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Login realizado com sucesso!');
+    });
 
-    <script>
-        $(document).ready(function() {
-            $('#formContato').submit(function(event) {
-                event.preventDefault();
-                alert('Mensagem enviada com sucesso!');
-                $(this).trigger('reset');
-            });
-        });
-    </script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Cadastro realizado com sucesso!');
+    });
+</script>
 
-    
 </body>
 </html>
-
